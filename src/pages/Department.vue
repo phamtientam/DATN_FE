@@ -4,13 +4,13 @@
       <div class="career-ladder">
         <div
           class="level"
-          v-for="(level, index) in list_levels"
+          v-for="(department, index) in list_department"
           :key="index"
-          :data="level"
-          @click="handleClick(level)"
+          :data="department"
+          @click="handleClick(department)"
           tabindex="0"
         >
-          <span>{{ level }}</span>
+          <span>{{ department }}</span>
           <i class="status_i" :ref="'statusIcon' + index">→</i>
         </div>
       </div>
@@ -31,14 +31,16 @@
           <tr>
             <th>Họ Và Tên</th>
             <th>Phòng Ban</th>
-            <th>Trình Độ</th>
+            <!-- <th>Email</th> -->
+            <th>Vị Trí</th>
           </tr>
         </thead>
         <tbody>
           <tr v-for="data in list_table_data" :key="data">
             <td>{{ data[0] }}</td>
             <td>{{ data[1] }}</td>
-            <td>{{ data[2] }}</td>
+            <td>{{ data[3] }}</td>
+            <!-- <td>{{ data[3] }}</td> -->
           </tr>
         </tbody>
       </table>
@@ -76,7 +78,9 @@ export default {
     BarChart: Bar,
   },
   async created() {
-    await this.analyze_count_level_by_employee();
+    await this.get_list_department();
+    await this.analyze_count_job_by_employee();
+
   },
   data() {
     return {
@@ -107,7 +111,7 @@ export default {
           },
         },
       },
-      list_levels: ["Intern", "Fresher", "Junior", "Middle", "Senior", "Technical"],
+      list_department: [],
       list_table_data: [],
       is_show_table: false,
     };
@@ -128,8 +132,13 @@ export default {
       }
       return colors;
     },
-    async analyze_count_level_by_employee() {
-      const response = await getData("/level/analyze_count_level_by_employee/", {});
+    async get_list_department(){
+      const response = await getData("/department/get_list_department/", {});
+      let data = response.data
+      this.list_department = data
+    },
+    async analyze_count_job_by_employee() {
+      const response = await getData("/department/analyze_count_department_by_employee/", {});
       let data_res = response.data;
       this.chartData.datasets[0].data = data_res.data;
       this.chartData.labels = data_res.labels;
@@ -137,8 +146,8 @@ export default {
       this.chartData.datasets[0].backgroundColor = backgroundColors;
       this.show_chart = true;
     },
-    async handleClick(level_name) {
-      const response = await getData("/level/get_employee_by_level/", { level_name });
+    async handleClick(department_name) {
+      const response = await getData("/department/get_employee_by_department/", { department_name });
       let data_res = response.data;
       this.list_table_data = data_res;
       this.is_show_table = true;
@@ -209,8 +218,9 @@ table {
   min-width: 100%;
   grid-template-columns:
     minmax(150px, 1fr)
-    minmax(150px, 1.67fr)
-    minmax(150px, 1.67fr);
+    minmax(120px, 1.37fr)
+    minmax(120px, 1.37fr)
+    minmax(10px, 1.7fr);
 }
 
 thead,

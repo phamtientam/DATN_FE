@@ -5,10 +5,10 @@ import NotFound from "@/pages/NotFoundPage.vue";
 // Admin pages
 import Dashboard from "@/pages/Dashboard.vue";
 import EmployeeView from "@/pages/Employee.vue";
-import Notifications from "@/pages/Notifications.vue";
-import Icons from "@/pages/Icons.vue";
+import Department from "@/pages/Department.vue";
+import Job from "@/pages/Job.vue";
 import Level from "@/pages/Level.vue";
-import Typography from "@/pages/Typography.vue";
+import Project from "@/pages/Project.vue";
 import ContractView from "@/pages/Contract.vue";
 
 const routes = [
@@ -30,12 +30,12 @@ const routes = [
       {
         path: "department",
         name: "department",
-        component: Notifications,
+        component: Department,
       },
       {
         path: "job",
         name: "job",
-        component: Icons,
+        component: Job,
       },
       {
         path: "level",
@@ -44,8 +44,8 @@ const routes = [
       },
       {
         path: "project",
-        name: "project",
-        component: Typography,
+        name: "project",  
+        component: Project,
       },
       {
         path: "contract",

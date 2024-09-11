@@ -4,13 +4,13 @@
       <div class="career-ladder">
         <div
           class="level"
-          v-for="(level, index) in list_levels"
+          v-for="(job, index) in list_jobs"
           :key="index"
-          :data="level"
-          @click="handleClick(level)"
+          :data="job"
+          @click="handleClick(job)"
           tabindex="0"
         >
-          <span>{{ level }}</span>
+          <span>{{ job }}</span>
           <i class="status_i" :ref="'statusIcon' + index">→</i>
         </div>
       </div>
@@ -31,7 +31,7 @@
           <tr>
             <th>Họ Và Tên</th>
             <th>Phòng Ban</th>
-            <th>Trình Độ</th>
+            <th>Vị Trí</th>
           </tr>
         </thead>
         <tbody>
@@ -76,7 +76,9 @@ export default {
     BarChart: Bar,
   },
   async created() {
-    await this.analyze_count_level_by_employee();
+    await this.get_list_job_position();
+    await this.analyze_count_job_by_employee();
+
   },
   data() {
     return {
@@ -107,7 +109,7 @@ export default {
           },
         },
       },
-      list_levels: ["Intern", "Fresher", "Junior", "Middle", "Senior", "Technical"],
+      list_jobs: [],
       list_table_data: [],
       is_show_table: false,
     };
@@ -128,8 +130,13 @@ export default {
       }
       return colors;
     },
-    async analyze_count_level_by_employee() {
-      const response = await getData("/level/analyze_count_level_by_employee/", {});
+    async get_list_job_position(){
+      const response = await getData("/job/get_list_job_position/", {});
+      let data = response.data
+      this.list_jobs = data
+    },
+    async analyze_count_job_by_employee() {
+      const response = await getData("/job/analyze_count_job_by_employee/", {});
       let data_res = response.data;
       this.chartData.datasets[0].data = data_res.data;
       this.chartData.labels = data_res.labels;
@@ -137,8 +144,8 @@ export default {
       this.chartData.datasets[0].backgroundColor = backgroundColors;
       this.show_chart = true;
     },
-    async handleClick(level_name) {
-      const response = await getData("/level/get_employee_by_level/", { level_name });
+    async handleClick(job_name) {
+      const response = await getData("/job/get_employee_by_job/", { job_name });
       let data_res = response.data;
       this.list_table_data = data_res;
       this.is_show_table = true;
