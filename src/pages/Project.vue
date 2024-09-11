@@ -6,8 +6,7 @@
           <h4 class="card-title">Paper Dashboard Headings</h4>
           <p class="card-category">
             Created using
-            <a href="https://www.google.com/fonts/specimen/Muli">Muli</a> Font
-            Family
+            <a href="https://www.google.com/fonts/specimen/Muli">Muli</a> Font Family
           </p>
         </template>
         <div class="content">
@@ -50,18 +49,17 @@
           <div class="typo-line">
             <p>
               <span class="category">Paragraph</span>Lorem ipsum dolor sit amet,
-              consectetuer adipiscing elit, sed diam nonummy nibh euismod
-              tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-              enim ad minim veniam.
+              consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+              laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.
             </p>
           </div>
           <div class="typo-line">
             <p class="category">Quote</p>
             <blockquote>
               <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                aliquam erat volutpat. Ut wisi enim ad minim veniam.
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+                nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
+                wisi enim ad minim veniam.
               </p>
               <small> Steve Jobs, CEO Apple </small>
             </blockquote>
@@ -69,8 +67,8 @@
           <div class="typo-line">
             <p class="category">Muted Text</p>
             <p class="text-muted">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy nibh euismod tincidunt ut laoreet.
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+              nibh euismod tincidunt ut laoreet.
             </p>
           </div>
           <div class="typo-line">
@@ -79,24 +77,24 @@
                -->
             <p class="category">Coloured Text</p>
             <p class="text-primary">
-              Text Primary - Light Bootstrap Table Heading and complex bootstrap
-              dashboard you've ever seen on the internet.
+              Text Primary - Light Bootstrap Table Heading and complex bootstrap dashboard
+              you've ever seen on the internet.
             </p>
             <p class="text-info">
-              Text Info - Light Bootstrap Table Heading and complex bootstrap
-              dashboard you've ever seen on the internet.
+              Text Info - Light Bootstrap Table Heading and complex bootstrap dashboard
+              you've ever seen on the internet.
             </p>
             <p class="text-success">
-              Text Success - Light Bootstrap Table Heading and complex bootstrap
-              dashboard you've ever seen on the internet.
+              Text Success - Light Bootstrap Table Heading and complex bootstrap dashboard
+              you've ever seen on the internet.
             </p>
             <p class="text-warning">
-              Text Warning - Light Bootstrap Table Heading and complex bootstrap
-              dashboard you've ever seen on the internet.
+              Text Warning - Light Bootstrap Table Heading and complex bootstrap dashboard
+              you've ever seen on the internet.
             </p>
             <p class="text-danger">
-              Text Danger - Light Bootstrap Table Heading and complex bootstrap
-              dashboard you've ever seen on the internet.
+              Text Danger - Light Bootstrap Table Heading and complex bootstrap dashboard
+              you've ever seen on the internet.
             </p>
           </div>
           <div class="typo-line">
@@ -158,8 +156,8 @@
                 <h5>Default Blockquote</h5>
                 <blockquote>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Integer posuere erat a ante.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                    posuere erat a ante.
                   </p>
                 </blockquote>
               </div>
@@ -167,8 +165,8 @@
                 <h5>Blockquote with Citation</h5>
                 <blockquote>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Integer posuere erat a ante.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                    posuere erat a ante.
                   </p>
                   <small
                     >Someone famous in
@@ -182,9 +180,8 @@
             <p class="category">Code</p>
             <p>
               This is
-              <code>.css-class-as-code</code>, an example of an inline code
-              element. Wrap inline code within a
-              <code> &lt;code&gt;...&lt;/code&gt;</code>tag.
+              <code>.css-class-as-code</code>, an example of an inline code element. Wrap
+              inline code within a <code> &lt;code&gt;...&lt;/code&gt;</code>tag.
             </p>
             <pre>
 1. #This is an example of preformatted text. 2. #Here is another line of code</pre
