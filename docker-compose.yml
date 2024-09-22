@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  vue-app:
+    build: .
+    ports:
+      - "8080:8080"  # Map the container port to the host port
+    volumes:
+      - .:/app  # Mount the current directory to the container for live updates
+    environment:
+      - NODE_ENV=development
