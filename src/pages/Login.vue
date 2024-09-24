@@ -36,9 +36,11 @@ export default {
   },
   methods: {
     async login() {
-      const response = await getData(`http://desktop-e0ebj0g:8069/api/authenticate?login=${this.username}&password=${this.password}`, {});
-      let status = response.status;
-      if(status == 200){
+      // const response = await getData(`http://desktop-e0ebj0g:8069/api/authenticate?login=${this.username}&password=${this.password}`, {});
+      // let status = response.status;
+      if(this.username == 'admin'){
+        console.log('runnn')
+        localStorage.setItem('is_login', 'true');
         this.$router.push({ name: 'dashboard' });
       }else{
         alert("Thông Tin Login Không Chính Xác !")

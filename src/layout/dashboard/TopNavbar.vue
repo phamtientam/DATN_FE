@@ -21,7 +21,7 @@
             title-classes="nav-link"
             icon="ti-bell"
           >
-            <a class="dropdown-item" href="login">Logout</a>
+            <a class="dropdown-item" href="login" @click="logout()">Logout</a>
           </drop-down>
         </ul>
       </div>
@@ -57,6 +57,9 @@ export default {
     hideSidebar() {
       this.$sidebar.displaySidebar(false);
     },
+    logout() {
+      localStorage.setItem('is_login', 'false');
+    }
   },
 };
 </script>

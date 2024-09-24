@@ -10,6 +10,9 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install
 
+# Install Vue CLI globally
+RUN npm install -g @vue/cli
+
 # Copy the rest of the application code
 COPY . .
 
