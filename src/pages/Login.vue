@@ -36,7 +36,7 @@ export default {
   },
   methods: {
     async login() {
-      const response = await getData(`http://desktop-e0ebj0g:8069/api/authenticate?login=${this.username}&password=${this.password}`, {});
+      const response = await getData(`http://localhost:8069/api/authenticate?login=${this.username}&password=${this.password}`, {});
       let status = response.status;
       if(status == 200){
         localStorage.setItem('is_login', 'true');
